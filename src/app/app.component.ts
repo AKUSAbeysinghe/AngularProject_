@@ -1,4 +1,4 @@
-import { Component, ViewChild,  AfterViewInit} from '@angular/core';
+/**import { Component, ViewChild,  AfterViewInit} from '@angular/core';
 import { PostComponent } from './post/post.component';  
 
 @Component({
@@ -31,5 +31,21 @@ export class AppComponent implements AfterViewInit {
   receiveMessage($event: string){
     this.fromChildOutput = $event;
   }
+
+}
+
+*/
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+
+export class AppComponent {
+ message: string ="Messsage From Typescript Component File"
+ imgUrl: string = 'https://gaillardcenter.org/wp-content/uploads/Event-Page-Graphic-1920x1080-1.jpg';
 
 }
