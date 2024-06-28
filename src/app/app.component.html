@@ -8,16 +8,59 @@
 <p>{{fromChildOutput}}</p>-->
 
 <!--<app-post [childMessage]='parentMessage'></app-post>-->
-
+<!---
 
 <h1>Angular App</h1>
-<p>{{message}}</p>
+<p>{{message}}</p>-->
 
 <!--<p>{{1+2}}</p>-->
 
 <!--property Binding -->
-<img src="{{imgUrl}}" alt="">  <!--string interpolicion-->
-<img [src]="imgUrl" alt="">    <!--property binding  he said this is more clear-->
+<!--<img src="{{imgUrl}}" alt="">-->  <!--string interpolicion-->
+<!--<img [src]="imgUrl" alt="">  -->  <!--property binding  he said this is more clear-->
 
 
+<!--<h1 [class.text-red] ="bool">Angular App</h1>
+<h1 [style.Color]=" bool? 'red':'blue' ">Style Binding</h1>
+
+-->
+<!--event binding-->
+<!--<button (click)="buttonClick()">Click Me</button><br><br>-->
+
+<!--filter binding
+<input type="text" (keyup.enter)="onKeyup(username.value)" #username>
+
+<input type="text" [(ngModel)] = "userName" (keyup.enter)="onKeyup(userName.value)">
+-->
+
+<!--
+<input type="text" [value]='textValue' (keyup.enter)="onKeyup()"><br><br>
+
+<input type="text" [(ngModel)] = 'textValue' (keyup.enter)="onKeyup()" >-->
+
+
+
+<div class="form-area">
+    <h1>Post Form</h1>
+    <br><br>
+    <input type="text" placeholder="Post Title" [(ngModel)] ="postTitle">
+    <br><br>
+    <textarea cols="30" rows="10" placeholder="Post Details"  [(ngModel)] ="postDetails" ></textarea>
+    <br><br>
+    <input type="text" placeholder="Post Image URL" [(ngModel)] ="imageURL">
+    <br><br>
+    <input type="text" placeholder="Post URL" [(ngModel)] ="postURL">
+    <br><br>
+    <input type="checkbox"> Add Background
+    <br><br>
+</div>
+
+
+<div class="preview-area">
+    <img [src]="imageURL" alt="">
+    <h1> <span [class.add-background]="addBackground">{{postTitle}}</span></h1>
+    <p>{{postDetails}}</p>
+    <a [href]="postURL" target="_blank" [style.display]="postURL?'block':'none'">More Details</a>
+
+</div>
 

@@ -33,7 +33,7 @@ export class AppComponent implements AfterViewInit {
   }
 
 }
-
+//A perfect introduction to live theater! The puppetry is spectacular.
 */
 
 import { Component } from '@angular/core';
@@ -45,7 +45,33 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
- message: string ="Messsage From Typescript Component File"
- imgUrl: string = 'https://gaillardcenter.org/wp-content/uploads/Event-Page-Graphic-1920x1080-1.jpg';
+buttonClick() {
+console.log('Button click Event Worked!');
+}
+ title(title: any) {
+   throw new Error('Method not implemented.');
+ }
+ //message: string ="Messsage From Typescript Component File"
+ //imgUrl: string = 'https://gaillardcenter.org/wp-content/uploads/Event-Page-Graphic-1920x1080-1.jpg';
+
+ bool: boolean = true;
+ userName: string | undefined;
+ textValue: string = "Value is coming from component"
+
+ onKeyup(){
+  
+
+
+    console.log(this.textValue);
+ }
+
+
+ postTitle: string | undefined; 
+ postDetails: string | undefined; 
+ imageURL: string | undefined;
+ postURL: string | undefined;
+ addBackground: boolean | undefined;
+
+
 
 }
