@@ -64,3 +64,89 @@
 
 </div>
 
+<p>{{postArray}}</p>
+
+<ul>
+    <li>{{postArray[0]}}</li>
+    <li>{{postArray[1]}}</li>
+    <li>{{postArray[2]}}</li>
+    <li>{{postArray[3]}}</li>
+    <li>{{postArray[4]}}</li>
+</ul>
+
+
+<ul>
+    <li * ngFor = "let post of postArray">{{post}}</li>
+
+</ul>
+
+<p>Fetching Object Array</p>
+<button (click)="addNew()">Add New Data</button>
+
+<div *ngIf = 'objArray.length>0' ; else noData>
+<ul>
+    <li *ngFor="let post of objArray; let i = index">{{post.postTitle}}
+    <button (click)="onDelete(i)">Delete</button></li>
+</ul>
+</div>
+
+<ng-template #postList>
+<ul>
+   
+   <li *ngFor="let post of objArray; let i = index">{{post.postTitle}}
+    <button (click)="onDelete(i)">Delete</button></li>
+   </ul>
+</ng-template>
+
+
+
+<ng-template #noData>
+     <p>There is no Data to fetch</p>
+</ng-template>
+<!---
+<p>ngSwitch Cases</p>
+<div>
+
+    <button (click)="onClick('step1')">Step 1</button>
+    <button (click)="onClick('step2')">Step 2</button>
+    <button (click)="onClick('step3')">Step 3</button>
+</div>
+<br>
+-->
+<div [ngSwitch] = "stepForm">
+
+<div *ngSwitchCase="'step 1'">Step 1 Form</div>
+<div *ngSwitchCase="'step 2'">Step 2 Form</div>
+<div *ngSwitchCase="'step 3'">Step 3 Form</div>
+<div *ngSwitchDefault >Something Else</div>
+</div> 
+
+<p>NgStyle Directive</p>
+
+<h1  [style.color] = "isActive ? 'red': 'black'"
+[style.textTransForm] ="isActive ? 'uppercase' : 'lowercase'">Angular Udemy Course</h1>
+
+<h1 [ngStyle]="{color: isActive ? 'red' : 'black',
+    textTransForm: isActive ? 'uppercase' : 'lowercase'
+}">NgStyle Directive</h1>
+
+
+<h1 [ngClass]=" {'main': isActive, 'text-weight': isActive}">ngClass Directives</h1>
+
+
+
+<!--task-->
+<div class="form-area">
+    <h3>User Details</h3>
+
+    <input type="text" placeholder="Name" [(ngModel)]='name'>
+    <br><br>
+
+    <input type="text" placeholder="E Mail" [(ngModel)]='email'>
+    <br><br>
+
+    <textarea cols="30" rows="10" placeholder="Address" [(ngModel)]='address'>    </textarea>
+    <br><br>
+
+    <button (click)="onclick">Save Data </button>
+</div>
