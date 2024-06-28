@@ -47,10 +47,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
 addNew() {
 throw new Error('Method not implemented.');
-}
+}/*
 onDelete(_t57: number) {
 throw new Error('Method not implemented.');
-}
+}*/
 post: any;
 buttonClick() {
 console.log('Button click Event Worked!');
@@ -125,6 +125,12 @@ onclick(){
 
 console.log(this.userArray);
 
+}
+
+
+onDelete(index: number)
+{
+   this.userArray.splice(index,1);
 }
 }
 
