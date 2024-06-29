@@ -1,9 +1,11 @@
 import { Component, OnInit, Input, output, EventEmitter, Output } from '@angular/core';
+import { PostService } from '../services/post.service';
 
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-  styleUrl: './post.component.css'
+  styleUrl: './post.component.css',
+  providers: [PostService]
 })
 export class PostComponent implements OnInit {
 
@@ -17,12 +19,26 @@ export class PostComponent implements OnInit {
   @Input() fromParent: string | undefined;
   
   @Output() messageEvent = new EventEmitter<string>();
-  constructor(){}
+  posts: Array<any> | undefined;
+  constructor(private postService:PostService){
+
+    //let postService = new PostService()
+    // this.posts = postService.postList;
+  }
 
   ngOnInit(): void {}
 
   sendMessage(){
     this.messageEvent.emit(this.outputChildMessage);
+  }
+
+
+  addNewData(){
+    let newPost ={id: 7,
+      postTitle: "post 7"
+    }
+
+    this.postService.addPost(newPost);
   }
 
 }

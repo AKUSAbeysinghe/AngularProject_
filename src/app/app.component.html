@@ -175,3 +175,45 @@
 <ng-template #noData>
     <h4>No data to show</h4>
 </ng-template>
+
+
+<!--
+<h1 {{title |uppercase }}></h1>
+
+
+<h1 {{count |number}}></h1>
+
+<h1> {{ dcValue | number: '2.2-2' }}</h1>
+
+<h1>{{price |currency: "USD" : false: '2.1-1'}}</h1>
+
+<h1>{{today |date: 'shortDate'}}</h1>
+
+<p>{{postObj  | json}}</p>
+
+
+
+
+Precent tage
+<h1>{{0.567 |percent}}</h1>-->
+
+<!--custom pipe-->
+
+
+<h3> City Name -{{userDetails.country |appendCLI }}</h3>
+
+<!--Custom Pipes with Arguments
+
+<p>{{dummyText |Summary }}</p>-->
+
+
+<ul>
+    <li *ngFor = "let post of posts" {{post.postTitle}}></li>
+    
+</ul>
+<!--<h3>Post Components</h3>-->
+<app-post></app-post>
+
+
+<!--<h3>Post List Components</h3>-->
+<app-post-list></app-post-list>

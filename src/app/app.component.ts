@@ -37,6 +37,10 @@ export class AppComponent implements AfterViewInit {
 */
 
 import { Component } from '@angular/core';
+import { PostService } from './services/post.service';
+//import {PostService} from '../services/post.service';
+
+
 
 @Component({
   selector: 'app-root',
@@ -96,12 +100,44 @@ isActive: boolean =true;
  
  userArray : Array<any> =[];
  
+// Remove or comment out the incorrect title method declaration
+// title(title: any) {
+//   throw new Error('Method not implemented.');
+// }
+
+// Keep this declaration
+//title: string = "Angular Course";
  
+count: number = 285645;
+dcValue: number = 2.56;
+
+price: number = 99.99;
+
+today: Date = new Date();
+
+postObj : object ={
+  id: 1,
+  postTitle: "post 1"
+}
  
- 
+userDetails ={
+
+  country : "US",
+  code: '2222'
+}
+
+dummyText: string ="Put a cover page with TICT3113(P) Assignment Put code in text and attach screenshots below "
+
+
+posts: Array<any>;
+
  constructor(){
     //for(let i=0; i<this.postArray.length; i++){
      // console.log(this.postArray[i]);
+   
+   
+     let postService = new PostService()
+     this.posts = postService.postList;
     }
  
 
@@ -132,6 +168,9 @@ onDelete(index: number)
 {
    this.userArray.splice(index,1);
 }
+
+
+
 }
 
 
