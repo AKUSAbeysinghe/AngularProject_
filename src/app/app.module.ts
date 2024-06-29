@@ -17,8 +17,8 @@ import { SummaryPipe } from './pipes/summary.pipe';
   declarations: [
     AppComponent,
     NavbarComponent,
-    PostComponent,
-    PostListComponent,
+    //PostComponent,
+    //PostListComponent,
     AppendPipe,
     AppendCLIPipe,
     SummaryPipe

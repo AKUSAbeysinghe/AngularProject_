@@ -37,7 +37,7 @@ export class AppComponent implements AfterViewInit {
 */
 
 import { Component } from '@angular/core';
-import { PostService } from './services/post.service';
+//import { PostService } from './services/post.service';
 //import {PostService} from '../services/post.service';
 
 
@@ -49,6 +49,7 @@ import { PostService } from './services/post.service';
 })
 
 export class AppComponent {
+  [x: string]: any;
 addNew() {
 throw new Error('Method not implemented.');
 }/*
@@ -129,15 +130,15 @@ userDetails ={
 dummyText: string ="Put a cover page with TICT3113(P) Assignment Put code in text and attach screenshots below "
 
 
-posts: Array<any>;
+//posts: Array<any>;
 
  constructor(){
     //for(let i=0; i<this.postArray.length; i++){
      // console.log(this.postArray[i]);
    
    
-     let postService = new PostService()
-     this.posts = postService.postList;
+     //let postService = new PostService()
+     //this.posts = postService.postList;
     }
  
 
@@ -169,7 +170,14 @@ onDelete(index: number)
    this.userArray.splice(index,1);
 }
 
+addNewData(){
+  let newpost ={
+    id: 7,
+    postTitle: "Post 7"
+  }
 
+  this['postService'].addPost(newpost);
+}
 
 }
 

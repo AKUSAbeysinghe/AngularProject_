@@ -204,16 +204,52 @@ Precent tage
 
 <!--Custom Pipes with Arguments
 
-<p>{{dummyText |Summary }}</p>-->
+<p>{{dummyText |Summary }}</p>
 
 
 <ul>
     <li *ngFor = "let post of posts" {{post.postTitle}}></li>
     
 </ul>
-<!--<h3>Post Components</h3>-->
-<app-post></app-post>
+<h3>Post Components</h3>-->
+<!--<app-post></app-post>
 
 
-<!--<h3>Post List Components</h3>-->
-<app-post-list></app-post-list>
+<h3>Post List Components</h3>
+<app-post-list></app-post-list>-->
+
+
+
+
+<div class="container mt-5"></div>
+<div class = "form-area">
+<form >
+
+    <div class="form-group">
+<div class="form-area">
+    <form>
+        <div class="form-group">
+            <label >First Name</label>
+            <input type="text" id="firstName" placeholder="Full name" class="form-control">
+        </div>
+        
+        <div class="form-group">
+            <label >Email</label>
+        <input type="email" placeholder="Email" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label>Address</label>
+        <textarea cols="30" rows="10" placeholder="Address" class="form-control"></textarea>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+ 
+
+
+
+</form>
+
+
+</div>

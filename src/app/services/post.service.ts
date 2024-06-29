@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+/**import { Injectable } from "@angular/core";
 
 
 export  class PostService{
@@ -24,4 +24,4 @@ export  class PostService{
     }
 
 
-}
+}*/
