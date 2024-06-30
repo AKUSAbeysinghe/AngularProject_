@@ -39,7 +39,7 @@ export class AppComponent implements AfterViewInit {
 import { Component } from '@angular/core';
 //import { PostService } from './services/post.service';
 //import {PostService} from '../services/post.service';
-
+import { FormControl, NgForm } from '@angular/forms';
 
 
 @Component({
@@ -178,6 +178,15 @@ addNewData(){
 
   this['postService'].addPost(newpost);
 }
+
+   onSubmit(f: NgForm){
+       console.log(f);
+   }
+
+
+   getValue(f: FormControl){
+                console.log(f);
+   }
 
 }
 
